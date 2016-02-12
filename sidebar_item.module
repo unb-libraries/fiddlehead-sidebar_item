@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Fiddlehead Sidebar Item feature.
+ */
+
+include_once 'sidebar_item.features.inc';
