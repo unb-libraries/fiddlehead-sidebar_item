@@ -120,6 +120,11 @@ function sidebar_item_views_default_views() {
   $handler = $view->new_display('page', 'Manage sidebar items page', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Manage sidebar items';
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    2 => '2',
+  );
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -295,10 +300,6 @@ function sidebar_item_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'sidebar_item' => 'sidebar_item',
   );
-  /* Filter criterion: Content: Published or admin */
-  $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
-  $handler->display->display_options['filters']['status_extra']['table'] = 'node';
-  $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
   $handler->display->display_options['path'] = 'admin/sidebar-items';
   $export['sidebar_images'] = $view;
 
