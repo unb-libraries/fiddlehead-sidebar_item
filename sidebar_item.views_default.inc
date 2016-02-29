@@ -217,7 +217,7 @@ function sidebar_item_views_default_views() {
   $handler->display->display_options['fields']['draggableviews']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['save_button_label'] = 'Update order';
-  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
+  $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 1;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -254,6 +254,12 @@ function sidebar_item_views_default_views() {
   $handler->display->display_options['fields']['publish_on']['field'] = 'publish_on';
   $handler->display->display_options['fields']['publish_on']['date_format'] = 'short';
   $handler->display->display_options['fields']['publish_on']['second_date_format'] = 'long';
+  /* Field: Scheduler: Unpublish on */
+  $handler->display->display_options['fields']['unpublish_on']['id'] = 'unpublish_on';
+  $handler->display->display_options['fields']['unpublish_on']['table'] = 'scheduler';
+  $handler->display->display_options['fields']['unpublish_on']['field'] = 'unpublish_on';
+  $handler->display->display_options['fields']['unpublish_on']['date_format'] = 'short';
+  $handler->display->display_options['fields']['unpublish_on']['second_date_format'] = 'long';
   /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
